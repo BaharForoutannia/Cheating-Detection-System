@@ -47,24 +47,28 @@ HTML/CSS/JavaScript – Front-end for the login page and question display.
 ## 🚀 Setup Instructions
 
 1.Clone the repository:
-git clone https://github.com/BaharForoutannia/algorithm_project.git cd cheating-detection 
+
+     git clone https://github.com/BaharForoutannia/algorithm_project.git cd cheating-detection 
 
 2.Create a Python virtual environment (recommended):
-python -m venv venv
-source venv/bin/activate
+
+     python -m venv venv
+     source venv/bin/activate
 
 3.Install dependencies:
-pip install Flask nltk
+     
+     pip install Flask nltk
 
 Optionally, if a requirements.txt is provided:
-pip install -r requirements.txt 
+     
+     pip install -r requirements.txt 
 
 4.Download NLTK data:
 The analysis script requires the WordNet corpora. In a Python shell or script, run:
 
-import nltk
-nltk.download('wordnet')
-nltk.download('omw-1.4')
+     import nltk
+     nltk.download('wordnet')
+     nltk.download('omw-1.4')
 
 This will fetch the WordNet database and its Open Multilingual WordNet data.
 
@@ -74,39 +78,23 @@ This will fetch the WordNet database and its Open Multilingual WordNet data.
 
 ## 📊 Project Structure
 
-cheating-detection/
-
-│
-
-├── app.py               # Main Flask application (login, question views)
-
-├── analysis.py          # Post-quiz analysis script for detecting cheating
-
-├── requirements.txt     # Python dependencies (Flask, NLTK, etc.)
-
-├── README.md            # (This file)
-
-│
-
-├── templates/           # HTML templates for Flask
-
-│    ├── login.html       # User login page
-
-│    ├── questions.html    # Displays each questions and captures answer
-
-│    └── single_question.html      # Displays a question and captures answer
-
-│
-
-├── static/              # Static files (CSS, JS, images)
-
-│    └── style.css              
-
-│
-
-└── data/                # Data directory
-
-     └── answers.json     # JSON file storing all user responses and timings
+     cheating-detection/
+     │
+     ├── app.py               # Main Flask application (login, question views)
+     ├── analysis.py          # Post-quiz analysis script for detecting cheating
+     ├── requirements.txt     # Python dependencies (Flask, NLTK, etc.)
+     ├── README.md            # (This file)
+     │
+     ├── templates/           # HTML templates for Flask
+     │    ├── login.html       # User login page
+     │    ├── questions.html    # Displays each questions and captures answer
+     │    └── single_question.html      # Displays a question and captures answer
+     │
+     ├── static/              # Static files (CSS, JS, images)
+     │    └── style.css              
+     │
+     └── data/                # Data directory
+          └── answers.json     # JSON file storing all user responses and timings
 
 app.py – Implements the Flask routes for login, serving questions, and recording answers.
 
@@ -128,11 +116,11 @@ requirements.txt – Lists Python packages (if provided).
 
 Start the quiz application by running:
 
-flask run 
+     flask run 
 
 or
 
-python app.py 
+     python app.py 
 
 Navigate to http://127.0.0.1:5000 in a web browser. Log in with provided credentials (or register as configured), then proceed through the quiz questions in sequence. Each answer and the time taken will be stored in data/answers.json.
 
@@ -140,7 +128,7 @@ Navigate to http://127.0.0.1:5000 in a web browser. Log in with provided credent
 
 After collecting responses, execute the analysis:
 
-python analysis.py data/answers.json 
+     python analysis.py data/answers.json 
 
 This will process the JSON file and print or save a report of any suspicious findings (see sample below). No web server is required for this step; it’s a standalone analysis.
 
@@ -182,15 +170,15 @@ To compare “Cats are cute” and “Cats are adorable”, the WordNet synsets 
 
 Below is an example of what the analysis might report on the console or log:
 
-Cheating Analysis Report
-
-Question 1:
-- Users Alice and Bob have highly similar answers (semantic similarity = 0.92). 
-Question 2:
-- User Charlie answered unusually fast (response time = 1.2s).
-Question 4:
-- Users Alice and Eve have identical answers (syntactic match).
-
+     Cheating Analysis Report
+     ------------------------
+     Question 1:
+     - Users Alice and Bob have highly similar answers (semantic similarity = 0.92). 
+     Question 2:
+     - User Charlie answered unusually fast (response time = 1.2s).
+     Question 4:
+     - Users Alice and Eve have identical answers (syntactic match).
+  
 Each bullet shows a flagged event: either a pair of users with similar answers (semantic/syntactic) or a user with a very quick response. In practice, the output can be formatted as plain text, JSON, or integrated into an instructor dashboard.
 
 
