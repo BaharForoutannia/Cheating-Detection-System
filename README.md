@@ -75,21 +75,37 @@ This will fetch the WordNet database and its Open Multilingual WordNet data.
 ## 📊 Project Structure
 
 cheating-detection/
+
 │
+
 ├── app.py               # Main Flask application (login, question views)
+
 ├── analysis.py          # Post-quiz analysis script for detecting cheating
+
 ├── requirements.txt     # Python dependencies (Flask, NLTK, etc.)
+
 ├── README.md            # (This file)
+
 │
+
 ├── templates/           # HTML templates for Flask
+
 │    ├── login.html       # User login page
+
 │    ├── questions.html    # Displays each questions and captures answer
+
 │    └── single_question.html      # Displays a question and captures answer
+
 │
+
 ├── static/              # Static files (CSS, JS, images)
+
 │    └── style.css              
+
 │
+
 └── data/                # Data directory
+
      └── answers.json     # JSON file storing all user responses and timings
 
 app.py – Implements the Flask routes for login, serving questions, and recording answers.
@@ -167,7 +183,7 @@ To compare “Cats are cute” and “Cats are adorable”, the WordNet synsets 
 Below is an example of what the analysis might report on the console or log:
 
 Cheating Analysis Report
-------------------------
+
 Question 1:
 - Users Alice and Bob have highly similar answers (semantic similarity = 0.92). 
 Question 2:
