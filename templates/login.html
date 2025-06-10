@@ -7,6 +7,19 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
+  <div class="container">
+    <h1>ورود به آزمون</h1>
+    <button id="toggleDarkMode" type="button" aria-pressed="false">حالت تاریک</button>
+    <form id="loginForm" method="post">
+      <label for="username">نام خود را وارد کنید:</label>
+      <input type="text" id="username" name="username" required autocomplete="off">
+      <button type="submit">شروع</button>
+    </form>
+  </div>
+</body>
+</html>
+
+    
     <div class="container">
         <h1>Login</h1>
         <form method="post">
