@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>پاسخ به سوالات</title>
+    <script>
+        let startTime;
+
+        window.onload = function() {
+            startTime = new Date().getTime();  // ذخیره زمان شروع
+        }
+
+        function calculateTime() {
+            let endTime = new Date().getTime();  // زمان پایان
+            let totalSeconds = Math.floor((endTime - startTime) / 1000);  // مدت زمان بر حسب ثانیه
+
+            let perQuestion = Math.floor(totalSeconds / 3); // فرض می‌گیریم هر سوال تقریباً زمان برابر داشته
+
+            // قرار دادن زمان برای هر سوال
+            document.getElementById("time1").value = perQuestion;
+            document.getElementById("time2").value = perQuestion;
+            document.getElementById("time3").value = totalSeconds - 2 * perQuestion; // باقی‌مانده
+
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <h2>لطفاً به سوالات زیر پاسخ دهید</h2>
+    <form method="POST" onsubmit="return calculateTime();">
+        {% for i in range(1, 4) %}
+            <p><strong>سوال {{ i }}:</strong> {{ questions[i-1] }}</p>
+            <textarea name="q{{ i }}" rows="3" cols="60" required></textarea><br>
+            <input type="hidden" id="time{{ i }}" name="time{{ i }}">
+            <br><br>
+        {% endfor %}
+        <input type="submit" value="ثبت پاسخ‌ها">
+    </form>
+</body>
+</html>
