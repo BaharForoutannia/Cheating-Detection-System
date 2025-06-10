@@ -121,3 +121,10 @@ button:hover {
   border-radius: 8px;
   min-height: 60px;
 }
+/* تنظیمات واکنش‌گرا */
+@media (max-width: 600px) {
+  .container {
+    padding: 20px;
+    margin: 20px auto;
+  }
+}
