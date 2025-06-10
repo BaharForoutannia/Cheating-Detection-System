@@ -122,7 +122,7 @@ or
 
      python app.py 
 
-Navigate to http://127.0.0.1:5000 in a web browser. Log in with provided credentials (or register as configured), then proceed through the quiz questions in sequence. Each answer and the time taken will be stored in data/answers.json.
+Navigate to [http://localhost:5000] in a web browser. Log in with provided credentials (or register as configured), then proceed through the quiz questions in sequence. Each answer and the time taken will be stored in data/answers.json.
 
 2.Running the Analysis Script:
 
