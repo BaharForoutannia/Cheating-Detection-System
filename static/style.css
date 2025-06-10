@@ -42,9 +42,10 @@ body.dark-mode {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
+h1, h2 {
     text-align: center;
-    color: #333;
+    color: var(--text-color);
+    margin-bottom: 20px;
 }
 
 label {
