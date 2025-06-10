@@ -81,3 +81,12 @@ button {
 button:hover {
     background-color: var(--button-hover-bg);
 }
+
+.progress-bar {
+  width: 100%;
+  background-color: #ddd;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 20px;
+  margin-bottom: 20px;
+}
