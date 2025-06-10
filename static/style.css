@@ -115,3 +115,9 @@ button:hover {
 .note-section {
   margin-top: 10px;
 }
+
+.note-section textarea {
+  background-color: var(--note-bg);
+  border-radius: 8px;
+  min-height: 60px;
+}
