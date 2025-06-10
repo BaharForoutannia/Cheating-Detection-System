@@ -20,6 +20,18 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+body.dark-mode {
+  --bg-color: #121212;
+  --text-color: #e0e0e0;
+  --input-bg: #2c2c2c;
+  --input-border: #555555;
+  --button-bg: #357a38;
+  --button-hover-bg: #2e6231;
+  --container-bg: #1e1e1e;
+  --highlight-color: #ffb74d;
+  --note-bg: #333333;
+}
+
 .container {
     width: 90%;
     max-width: 500px;
