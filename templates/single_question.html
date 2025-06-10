@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Question {{ qnum }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script>
+        let startTime = Date.now();
+        function beforeSubmit() {
+            let timeTaken = Math.floor((Date.now() - startTime) / 1000);
+            document.getElementById("time_taken").value = timeTaken;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Question {{ qnum }}</h1>
+        <p><strong>{{ question }}</strong></p>
+        <form method="post" onsubmit="beforeSubmit()">
+            <label for="answer">Your answer:</label>
+            <textarea id="answer" name="answer" rows="4" required></textarea>
+            <input type="hidden" name="time_taken" id="time_taken">
+            <button type="submit">Submit Answer</button>
+        </form>
+    </div>
+</body>
+</html>
