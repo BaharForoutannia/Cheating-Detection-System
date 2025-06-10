@@ -59,8 +59,10 @@ input[type="text"], textarea {
     padding: 10px;
     margin-top: 8px;
     border-radius: 8px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--input-border);
+    color: var(--text-color);
     box-sizing: border-box;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
 }
 
 button {
