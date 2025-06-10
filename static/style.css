@@ -97,3 +97,13 @@ button:hover {
   width: 0;
   transition: width 0.3s ease;
 }
+
+.review-flag {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+  cursor: pointer;
+  color: var(--highlight-color);
+  font-weight: bold;
+  user-select: none;
+}
