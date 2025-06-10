@@ -5,10 +5,7 @@
   --input-border: #ccc;
   --button-bg: #4caf50;
   --button-hover-bg: #45a049;
-  --container-bg: #ffffff;
-  --highlight-color: #ff9800;
-  --note-bg: #f9f9f9;
-
+  
 }
 
 body {
@@ -27,9 +24,7 @@ body.dark-mode {
   --input-border: #555555;
   --button-bg: #357a38;
   --button-hover-bg: #2e6231;
-  --container-bg: #1e1e1e;
-  --highlight-color: #ffb74d;
-  --note-bg: #333333;
+  
 }
 
 .container {
