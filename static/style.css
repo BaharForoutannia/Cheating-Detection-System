@@ -1,46 +1,23 @@
-:root {
-  --bg-color: #ffffff;
-  --text-color: #333333;
-  --input-bg: #ffffff;
-  --input-border: #ccc;
-  --button-bg: #4caf50;
-  --button-hover-bg: #45a049;
-  
-}
-
 body {
     font-family: Arial, sans-serif;
-    background-color: var(--bg-color);
-    color: var(--text-color);
+    background-color: #f4f4f9;
     margin: 0;
     padding: 0;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-body.dark-mode {
-  --bg-color: #121212;
-  --text-color: #e0e0e0;
-  --input-bg: #2c2c2c;
-  --input-border: #555555;
-  --button-bg: #357a38;
-  --button-hover-bg: #2e6231;
-  
 }
 
 .container {
     width: 90%;
-    max-width: 600px;
+    max-width: 500px;
     margin: 50px auto;
-    background-color: var(--container-bg);
+    background-color: white;
     padding: 30px;
     border-radius: 15px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
-h1, h2 {
+h1 {
     text-align: center;
-    color: var(--text-color);
-    margin-bottom: 20px;
+    color: #333;
 }
 
 label {
@@ -54,14 +31,12 @@ input[type="text"], textarea {
     padding: 10px;
     margin-top: 8px;
     border-radius: 8px;
-    border: 1px solid var(--input-border);
-    color: var(--text-color);
+    border: 1px solid #ccc;
     box-sizing: border-box;
-    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
 }
 
 button {
-    background-color: var(--button-bg);
+    background-color: #4CAF50;
     color: white;
     padding: 10px 18px;
     margin-top: 20px;
@@ -70,56 +45,9 @@ button {
     cursor: pointer;
     width: 100%;
     font-size: 16px;
-    transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: var(--button-hover-bg);
+    background-color: #45a049;
 }
 
-.progress-bar {
-  width: 100%;
-  background-color: #ddd;
-  border-radius: 20px;
-  overflow: hidden;
-  height: 20px;
-  margin-bottom: 20px;
-}
-
-.progress-bar-fill {
-  height: 100%;
-  background-color: var(--button-bg);
-  width: 0;
-  transition: width 0.3s ease;
-}
-
-.review-flag {
-  display: flex;
-  align-items: center;
-  margin-top: 8px;
-  cursor: pointer;
-  color: var(--highlight-color);
-  font-weight: bold;
-  user-select: none;
-}
-
-.review-flag input {
-  margin-right: 6px;
-}
-
-.note-section {
-  margin-top: 10px;
-}
-
-.note-section textarea {
-  background-color: var(--note-bg);
-  border-radius: 8px;
-  min-height: 60px;
-}
-/* تنظیمات واکنش‌گرا */
-@media (max-width: 600px) {
-  .container {
-    padding: 20px;
-    margin: 20px auto;
-  }
-}
