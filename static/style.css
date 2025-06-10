@@ -66,7 +66,7 @@ input[type="text"], textarea {
 }
 
 button {
-    background-color: #4CAF50;
+    background-color: var(--button-bg);
     color: white;
     padding: 10px 18px;
     margin-top: 20px;
