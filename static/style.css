@@ -107,3 +107,7 @@ button:hover {
   font-weight: bold;
   user-select: none;
 }
+
+.review-flag input {
+  margin-right: 6px;
+}
