@@ -1,3 +1,16 @@
+:root {
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --input-bg: #ffffff;
+  --input-border: #ccc;
+  --button-bg: #4caf50;
+  --button-hover-bg: #45a049;
+  --container-bg: #ffffff;
+  --highlight-color: #ff9800;
+  --note-bg: #f9f9f9;
+
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f9;
